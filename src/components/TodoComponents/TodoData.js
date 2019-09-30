@@ -1,32 +1,27 @@
 const todosData = [
   {
     id: 1,
-    text: "Create event component",
+    text: "Create Todo list",
     completed: true
   },
   {
     id: 2,
-    text: "Create Event Info component",
-    completed: false
+    text: "make Todo list work",
+    completed: true
   },
   {
     id: 3,
-    text: "Create Event Main Section component",
-    completed: false
+    text: "make todo list accept new items",
+    completed: true
   },
   {
     id: 4,
-    text: "Create Navigation component",
+    text: "make the previous work",
     completed: true
   },
   {
     id: 5,
-    text: "Create Footer component",
-    completed: false
-  },
-  {
-    id: 6,
-    text: "Add Styles to components",
+    text: "add a delete item button",
     completed: false
   }
 ];
