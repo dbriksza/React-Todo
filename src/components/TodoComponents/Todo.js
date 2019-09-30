@@ -11,7 +11,7 @@ class Todos extends React.Component {
       newTodo: {
         id: "",
         text: "",
-        completed: false
+        completed: true
       }
     };
     this.handleChange = this.handleChange.bind(this);
@@ -34,15 +34,22 @@ class Todos extends React.Component {
     this.setState({
       newTodo: {
         ...this.state.newTodo,
-        [e.target.name]: e.target.value,
-        id: Date.now()
+        [e.target.name]: e.target.value
       }
     });
   };
   addTodo = e => {
     e.preventDefault();
     console.log(this.state.todos);
+    this.setState({
+      newTodo: {
+        ...this.state.newTodo,
+        id: Date.now(),
+        completed: true
+      }
+    });
     this.state.todos.push(this.state.newTodo);
+    this.handleChange(this.state.newTodo.id);
   };
 
   render() {
