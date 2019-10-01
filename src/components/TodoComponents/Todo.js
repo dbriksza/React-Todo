@@ -51,6 +51,12 @@ class Todos extends React.Component {
     this.state.todos.push(this.state.newTodo);
     this.handleChange(this.state.newTodo.id);
   };
+  delete = e => {
+    e.preventDefault();
+    this.setState({
+      todos: this.state.todos.filter(todo => todo.completed === false)
+    });
+  };
 
   render() {
     const todoItems = this.state.todos.map(item => (
@@ -68,6 +74,7 @@ class Todos extends React.Component {
           />
           <button>Add Todo!</button>
         </form>
+        <button onClick={this.delete}>Delete!</button>
         <h2 className="todos-header">Event Todos</h2>
         {todoItems}
       </div>
